@@ -17,7 +17,6 @@ const favoriteBlog = (blogs) => {
     // https://flaviocopes.com/how-to-sort-array-of-objects-by-property-javascript/
     // sort in descending order so that we can get the blog with most like at index 0
     const sortedBlogs = blogs.sort((a,b)=>(a.likes<b.likes)? 1:-1 )
-    console.log(sortedBlogs)
     return sortedBlogs[0]
 }
 
@@ -35,6 +34,7 @@ const mostBlogs = (blogs) => {
             authors.push(newAuthor)
         }
     }
+   //https://www.w3schools.com/js/js_array_iteration.asp
    blogs.forEach(blog => {
         authorUpdater(blog)
     });
